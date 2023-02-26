@@ -1,4 +1,4 @@
-#Install
+# Install 
 We recommend using Anaconda to create a python virtual environment.
 
 Follow the instructions on the [pytorch homepage](https://pytorch.org/) to install 
@@ -10,8 +10,8 @@ Then install some other packages:
 ```
 pip install -r requirements.txt
 ```
-#Usage
-##Setting Parameters
+# Usage
+## Setting Parameters
 Firstly, modify the configuration files reasonably, including `CONSTANTS.py` 
 and `gs_model_config.py`. 
 In `CONSTANTS.py`, `DATA_ROOT_PATH` is the directory where the dataset is located, 
@@ -23,7 +23,7 @@ the corresponding file path. Similarly, `token_config["src_vocab_path"]` and
 replaced by the side length (meter) corresponding to the actual background area. `train_config["gpu_ids"]` is the serial number of the GPU used.
 Other parameters can also be modified as needed.
 
-##Data
+## Data
 You can simply organize your POI data into something like this:
 ```
 data1 = {'review': ["review1", "review2", ...],
@@ -41,7 +41,7 @@ Save `data_list` through `json`, and the obtained file can be used as a dataset 
 Note that the data processor assumes that the texts in `review` and `reference` are pre-tokenized 
 and separated using `#`.
 
-##Training and Testing
+## Training and Testing
 Running the code below will start training
 and run inference on the test set after training:
 ```
@@ -61,7 +61,7 @@ Note that you have modified the paths in `eval.py` reasonably.
 We use [nlg-eval](https://github.com/Maluuba/nlg-eval) 
 to calculate the metrics except for Distinct.
 
-#References
+# References
 Some codes are from:
 
 https://github.com/JunjieHu/ReCo-RL
